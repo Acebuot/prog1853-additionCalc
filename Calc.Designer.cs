@@ -37,7 +37,7 @@
             this.resultTxt = new System.Windows.Forms.TextBox();
             this.value2Txt = new System.Windows.Forms.TextBox();
             this.value1Txt = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblDesc = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnCalc
@@ -121,14 +121,14 @@
             this.value1Txt.Size = new System.Drawing.Size(129, 20);
             this.value1Txt.TabIndex = 1;
             // 
-            // label1
+            // lblDesc
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(159, 19);
-            this.label1.Name = "lblDescription";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 9;
-            this.label1.Text = "Value 1 + Value 2";
+            this.lblDesc.AutoSize = true;
+            this.lblDesc.Location = new System.Drawing.Point(159, 19);
+            this.lblDesc.Name = "lblDesc";
+            this.lblDesc.Size = new System.Drawing.Size(91, 13);
+            this.lblDesc.TabIndex = 9;
+            this.lblDesc.Text = "Value 1 + Value 2";
             // 
             // Calc
             // 
@@ -137,7 +137,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnExit;
             this.ClientSize = new System.Drawing.Size(371, 203);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblDesc);
             this.Controls.Add(this.value1Txt);
             this.Controls.Add(this.value2Txt);
             this.Controls.Add(this.resultTxt);
@@ -167,7 +167,7 @@
         private System.Windows.Forms.TextBox resultTxt;
         private System.Windows.Forms.TextBox value2Txt;
         private System.Windows.Forms.TextBox value1Txt;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblDesc;
     }
 }
 

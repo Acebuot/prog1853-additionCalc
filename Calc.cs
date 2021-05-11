@@ -19,16 +19,36 @@ namespace Calculator
 
         private void btnCalc_Click(object sender, EventArgs e)
         {
+            int input1;
+            int input2;
             
             //get useer input
-            Int32 input1 = int.Parse(value1Txt.Text);
-            int input2 = Convert.ToInt32(value2Txt.Text);
+            if (int.TryParse(value1Txt.Text, out input1) && int.TryParse(value2Txt.Text, out input2))
+            {
+                //Calculation
+                int result = input1 + input2;
 
-            //Calculation
-            int result = input1 + input2;
+                //output
+                resultTxt.Text = result.ToString();
 
-            //output
-            resultTxt.Text = result.ToString();
+                //change text back to black (incase it was wrong)
+                value1Txt.ForeColor = Color.Black;
+                value2Txt.ForeColor = Color.Black;
+            }
+            else
+            {
+                //if any of the input can't be parsed, turn text to red
+                double doubleVal1;
+                double doubleVal2;
+                if (!double.TryParse(value1Txt.Text, out doubleVal1))
+                    value1Txt.ForeColor = Color.Red;
+                if (!double.TryParse(value2Txt.Text, out doubleVal2))
+                    value2Txt.ForeColor = Color.Red;
+            }
+            
+            
+
+            
             
 
         }
@@ -43,6 +63,10 @@ namespace Calculator
 
             //set focus to first textbox
             value1Txt.Focus();
+
+            //change text back to black (incase it was wrong)
+            value1Txt.ForeColor = Color.Black;
+            value2Txt.ForeColor = Color.Black;
         }
 
         private void btnExit_Click(object sender, EventArgs e)
